@@ -1,0 +1,54 @@
+POST http://localhost:8514/post/users/login
+content-type: application/json
+
+{
+    "username":"aziz.kurt",
+    "password":"Aziz-65554"
+}
+###
+
+POST http://localhost:8514/post/users/add
+Content-Type: application/json
+
+{
+    "username":"aziz.kurt",
+    "password":"Aziz-65554",
+    "authorty":"yetkili"
+}
+###
+// Şirket Ekleme Bölümü
+POST http://localhost:8514/post/companys/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYXppei5rdXJ0IiwiaWF0IjoxNjM2OTkzODY4fQ.cDXUhHT1DQUhTvnm1D9bSshn0F_vUkZ5HD9tHCo7Q_0
+
+{
+    "company_name":"İçişleri Bakanlığı"
+}
+###
+// Product Type Ekleme Bölümü
+
+POST http://localhost:8514/post/products/product_type
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYXppei5rdXJ0IiwiaWF0IjoxNjM2OTkzODY4fQ.cDXUhHT1DQUhTvnm1D9bSshn0F_vUkZ5HD9tHCo7Q_0
+
+{
+    "company_id":"61929ae0af55f5400e8e2222",
+    "product_type_name":"Kitap"
+}
+###
+// Product Adı Ekleme Bölümü
+
+POST http://localhost:8514/post/products/product_names
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYXppei5rdXJ0IiwiaWF0IjoxNjM2OTkzODY4fQ.cDXUhHT1DQUhTvnm1D9bSshn0F_vUkZ5HD9tHCo7Q_0
+
+{
+    "product_name":"Gazetelikçiiii",
+    "company_id":"61929ae0af55f5400e8e2222",
+}
+###
+GET http://localhost:8514/get/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYXppei5rdXJ0IiwiaWF0IjoxNjM2OTkzODY4fQ.cDXUhHT1DQUhTvnm1D9bSshn0F_vUkZ5HD9tHCo7Q_0
+###
+GET http://localhost:8514/get/allData
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYXppei5rdXJ0IiwiaWF0IjoxNjM2OTkzODY4fQ.cDXUhHT1DQUhTvnm1D9bSshn0F_vUkZ5HD9tHCo7Q_0
